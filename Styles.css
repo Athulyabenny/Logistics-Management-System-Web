@@ -1,0 +1,204 @@
+﻿/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    color: #333;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #1565c0;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    background-color: #1e88e5;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+    nav ul li {
+        display: inline;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+            nav ul li a:hover {
+                background-color: #0d47a1;
+                border-radius: 5px;
+            }
+
+/* Form Section */
+main section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #1e88e5;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+    button:hover {
+        background-color: #1565c0;
+        transform: scale(1.05);
+    }
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    background-color: #0d47a1;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main section {
+        width: 90%;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Element starts invisible */
+        transform: translateY(-20px); /* Element is slightly above */
+    }
+
+    to {
+        opacity: 1; /* Element becomes fully visible */
+        transform: translateY(0); /* Element moves to its original position */
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Element starts invisible */
+        transform: translateY(-20px); /* Element is slightly above */
+    }
+
+    to {
+        opacity: 1; /* Element becomes fully visible */
+        transform: translateY(0); /* Element moves to its original position */
+    }
+}
+header {
+    animation: fadeIn 2s ease-in-out; /* Animation name, duration, and easing */
+}
+button {
+    position: relative; /* Ensures the animation stays within the button */
+    overflow: hidden; /* Prevents the animation from spilling outside */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+    button:hover {
+        background-color: #1565c0; /* Change the color */
+        transform: scale(1.05); /* Slightly enlarge the button */
+    }
+
+    button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%; /* Start outside of the button */
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2); /* Light overlay */
+        transition: left 0.4s; /* Smooth movement */
+    }
+
+    button:hover::after {
+        left: 0; /* Shine effect moves over the button */
+    }
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start outside the viewport */
+    }
+
+    to {
+        transform: translateX(0); /* Element slides into place */
+    }
+}
+section {
+    animation: slideIn 1.5s ease-out; /* Section slides in on load */
+}
+@media (max-width: 768px) {
+    header {
+        animation: fadeIn 1s ease-in; /* Shorter duration on smaller screens */
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+    }
+
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
+div {
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes move {
+    0% {
+        transform: translateX(0); /* Start at original position */
+    }
+
+    50% {
+        transform: translateX(100px); /* Move right */
+    }
+
+    100% {
+        transform: translateX(0); /* Return to original position */
+    }
+}
+div {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+}
